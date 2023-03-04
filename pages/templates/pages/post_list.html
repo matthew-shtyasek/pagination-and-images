@@ -10,4 +10,14 @@
         </div>
     {% endfor %}
 
+    <div style="display: flex; align-items: center;">
+        {% if page.has_previous %}
+            <a href="{% url 'posts:posts' page.previous_page_number %}">< </a>
+        {% endif %}
+        <p> {{page.number}} </p>
+        {% if page.has_next %}
+            <a href="{% url 'posts:posts' page.next_page_number %}"> ></a>
+        {% endif %}
+    </div>
+
 {% endblock %}
