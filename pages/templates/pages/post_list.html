@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% for post in post_list %}
+    {% for post in page %}
         <div>
             <h3>{{post.title}}</h3>
             <p>{{post.text|truncatechars:30}}</p>

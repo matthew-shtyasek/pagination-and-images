@@ -5,5 +5,5 @@ from pages.views import post_list_view
 app_name = 'pages'
 
 urlpatterns = [
-    path('posts/', post_list_view, name='posts'),
+    path('posts/<int:page_num>/', post_list_view, name='posts'),
 ]
