@@ -1,0 +1,13 @@
+{% extends 'root.html' %}
+
+{% block content %}
+
+    {% for post in post_list %}
+        <div>
+            <h3>{{post.title}}</h3>
+            <p>{{post.text|truncatechars:30}}</p>
+            <p>{{post.author}}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
